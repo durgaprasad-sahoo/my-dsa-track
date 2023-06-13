@@ -2,6 +2,8 @@ class Solution{
     public:
     int maxLen(vector<int>&A, int n)
     {   
+        //this is  the optimal approach for both positives and negatives
+        //was hard to understand.
         //15 -2 2 -8 1 7 10 23
         int K = 0;
         int sum = 0;
