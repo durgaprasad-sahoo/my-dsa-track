@@ -1,0 +1,23 @@
+class Solution {
+public:
+    string getPermutation(int n, int k) {
+       //ex: n = 4, k = 17;
+
+       //1 2 3 4;
+       int fact = 1;
+       vector<int>nums;
+       for(int i=1; i<n; i++){
+           fact*=i;  // 1 x 1 x 2 x 3 = 6
+           nums.emplace_back(i);  // 1 2 3;
+       }nums.emplace_back(n);  // 1 2 3 4;
+       string ans ="";
+       k = k-1; // in 0th index : k will be the 16th index;
+       while(true){
+           ans = ans+ to_string(nums[k/fact]); //16/6 = 2nd index. ans = 3---;
+           nums.erase(nums.begin()+k/fact); //1 2 4;
+           if(nums.size()==0) break;
+           k = k%fact;  //new k = 16/6 = 2;
+           fact = fact/nums.size();  //new fact = 6/3 = 2;
+       } return ans;
+    }
+};
