@@ -1,7 +1,7 @@
 class Solution {
 public:
     void solve(int col, vector<int>&leftRow, vector<int>&lowerDiagonal, vector<int>&upperDiagonal, vector<vector<string>>&ans, vector<string>&board, int n){
-        if(col==n){
+        if(col == n){
             ans.push_back(board);
             return;
         }
