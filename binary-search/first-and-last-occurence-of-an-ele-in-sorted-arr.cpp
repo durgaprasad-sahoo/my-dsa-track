@@ -15,6 +15,11 @@ public:
             ans.push_back(last_occurence);
         }
         return ans;
-        
+
+        //method 2: using binary search twice.
+        //first search  will search for first occurence from mid towards low. so when nums[mid]==target
+        //along  with first = mid, do high = mid-1;
+        //second search  will search for last occurence from mid towards high. so when nums[mid]==target
+        //along  with first = mid, do low = mid+1;
     }
 };
