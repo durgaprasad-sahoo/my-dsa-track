@@ -7,6 +7,7 @@ public:
             int mid = (low+high)/2;
             if(nums[low]<=nums[high]){
                 ans = min(ans, nums[low]);
+                break;
             }
             //check the sorted side first and take the min from this side first then eleminate the sorted array and check its min with the other sides min
             if(nums[low]<=nums[mid]){
