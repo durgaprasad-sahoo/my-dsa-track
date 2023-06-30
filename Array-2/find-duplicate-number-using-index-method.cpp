@@ -8,7 +8,7 @@ public:
         //2nd index i.e 1+n = 6
         for(int i=0; i<n; i++){
             int index = nums[i]%n;
-            nums[index] = nums[index]+n;
+            nums[index]=nums[index]+n;
         }
         //2 8 11 12 3
         //if arr[i]>=2 then the index is the duplicate number
