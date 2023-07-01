@@ -53,7 +53,7 @@ public:
             return newHead;
         }
         
-        while (fast->next != NULL) {
+        while (fast -> next != NULL) {
             fast = fast->next;
             slow = slow->next;
         }
