@@ -6,7 +6,7 @@ public:
 	    int lb = lower_bound(arr, arr+n, x)-arr;
 	    int ub = upper_bound(arr, arr+n, x)-arr;
 	    if(lb==n || arr[lb]!=x) return 0;
-	    else return ub-lb;
+	    else return ub - lb;
 	}
 };
 
