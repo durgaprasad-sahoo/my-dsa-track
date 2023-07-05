@@ -22,7 +22,7 @@ int Solution::books(vector<int> &A, int B) {
     //12 34 67 90
     //low = 12, high = 203 i.e 12+34+67+90. This is the search space
     if(B> A.size()) return -1;
-    int low = A[0];
+    int low = A[0];  // in sorted array least will always be the first element
     int high = 0;
     for(int i=0; i<A.size(); i++){
         high+= A[i];
